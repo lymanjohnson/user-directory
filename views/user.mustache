@@ -8,19 +8,21 @@
      <img src="{{avatar}}" alt="">
       <h1>{{name}}</h1>
       {{#job}}
-      <p>{{location.city}}, {{location.country}} | {{job}}, {{company}}</p>
+      <p>{{address.city}} {{address.country}} | {{job}}, {{company}}</p>
       {{/job}}
       {{^job}}
-      <span><p>{{location.city}}, {{location.country}} | <p class ="emphasis">Available for Hire</p></span>
+      <span><p>{{address.city}} {{address.country}} | <p class ="emphasis">Available for Hire</p></span>
       {{/job}}
       <p>{{email}} | {{phone}}</p>
-      {{#university}}
       <h2>Education:</h2>
-      <p>{{university}}</p>
+      {{#university}}
+      <p>{{.}}</p>
       {{/university}}
-      {{#skills}}
       <h2>Skills</h2>
+      {{#skills}}
         <li>{{.}}</li>
       {{/skills}}
+      <br>
+      <a href="/users/">Back to directory</a>
    </body>
  </html>

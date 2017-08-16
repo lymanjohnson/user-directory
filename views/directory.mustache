@@ -5,8 +5,10 @@
      <link rel="stylesheet" type="text/css" href="/styles-directory.css">
    </head>
    <body>
+     <div id="entry-wrapper">
     {{#users}}
-      <a href="./{{username}}"><div class="entry">
+    <a href="/users/{{username}}">
+      <div class="entry">
         <img src="{{avatar}}" alt="">
         <h1>{{name}}</h1>
         {{#job}}
@@ -18,5 +20,6 @@
         {{/job}}
       </div></a>
     {{/users}}
+  </div>
    </body>
  </html>

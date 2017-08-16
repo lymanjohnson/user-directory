@@ -24,7 +24,7 @@ app.get("/users/:username", function (req, res) {
   let thisUser = dataFile.users.filter(function( obj ) {
     return obj.username == req.params.username;
   });
-
+  
     res.render('user',thisUser[0])
 })
 
