@@ -20,7 +20,16 @@ app.get("/directory/", function (req, res) {
 })
 
 app.get("/user/:username", function (req, res) {
-		res.send(req.params.username);
+
+  let thisUser = dataFile.users.filter(function( obj ) {
+    return obj.username == req.params.username;
+  });
+
+  // res.send(typeof dataFile);
+  // res.send(dataFile.users);
+
+		res.send(thisUser);
+    // res.render('user',thisUser)
 })
 
 app.listen(3000, function () {
