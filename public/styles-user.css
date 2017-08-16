@@ -30,3 +30,12 @@ img {
 a {
   /*margin-left: -70px;*/
 }
+
+h1 , h2 {
+    color: rgb(49, 73, 230);
+}
+
+p , li {
+  color: rgb(50, 50, 50);
+  list-style: none;
+}
