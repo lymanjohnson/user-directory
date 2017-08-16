@@ -23,13 +23,14 @@ app.get("/user/:username", function (req, res) {
 
   let thisUser = dataFile.users.filter(function( obj ) {
     return obj.username == req.params.username;
+
   });
 
   // res.send(typeof dataFile);
   // res.send(dataFile.users);
 
-		res.send(thisUser);
-    // res.render('user',thisUser)
+		// res.send(thisUser[0]);
+    res.render('user',thisUser[0])
 })
 
 app.listen(3000, function () {
